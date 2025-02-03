@@ -18,3 +18,28 @@ print('--------------------------------------------')
 time_from_2000 = datetime.datetime.today() - datetime.datetime(2000, 1, 1)
 print(f'Praejo {time_from_2000.days} dienu nuo 2000-01-01')
 print('--------------------------------------------')
+# 4 Task
+user_input = input('Enter the date in this format YYYY-MM-DD: ')
+date_object = datetime.datetime.strptime(user_input, "%Y-%m-%d")
+print('Converted date', date_object)
+# 5 Task
+ivestis = "2022-12-31, 23:59:59"
+
+my_datetime = datetime.datetime.strptime(ivestis, "%Y-%m-%d, %H:%M:%S")
+
+menesiai = {
+    "January": "sausio", "February": "vasario", "March": "kovo", "April": "balandžio",
+    "May": "gegužės", "June": "birželio", "July": "liepos", "August": "rugpjūčio",
+    "September": "rugsėjo", "October": "spalio", "November": "lapkričio", "December": "gruodžio"
+}
+
+menuo_en = my_datetime.strftime("%B")
+menuo_lt = menesiai[menuo_en]
+
+formatted_date_1 = my_datetime.strftime("%d/%m/%Y, %H:%M:%S")
+formatted_date_2 = my_datetime.strftime(f"%Y metų {menuo_lt} %d diena")
+
+print(formatted_date_1)
+print(formatted_date_2)
+
+

@@ -18,3 +18,16 @@ print('---------------------------------------')
 #Example
 time_from_2000 = datetime.datetime.today() - datetime.datetime(2000, 1, 1)
 print(time_from_2000)
+print('---------------------------------------')
+#Example
+ivestis = '2020-02-11'
+my_datetime = datetime.datetime.strptime(ivestis, "%Y-%m-%d")
+print(my_datetime)
+ivestis = "2020.02.15, 10:11:59"
+my_datetime = datetime.datetime.strptime(ivestis, "%Y.%m.%d, %H:%M:%S")
+print(my_datetime)
+print('---------------------------------------')
+#Example
+print(my_datetime)
+print(my_datetime.strftime("%d %m %Y"))
+print(my_datetime.strftime("%d %B %Y"))
