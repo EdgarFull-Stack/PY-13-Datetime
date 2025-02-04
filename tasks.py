@@ -41,5 +41,24 @@ formatted_date_2 = my_datetime.strftime(f"%Y metų {menuo_lt} %d diena")
 
 print(formatted_date_1)
 print(formatted_date_2)
-
+print('--------------------------------------------')
+# 6 Task
+data1 = datetime.datetime(2023,1,1)
+data2 = datetime.datetime(2024,1,1)
+skirtumas = data2-data1
+print(f'Skirtumas yra: {skirtumas.days}')
+print('--------------------------------------------')
+# 7 Task
+current_date = datetime.datetime.today()
+res = current_date + datetime.timedelta(days=90)
+print(f'Data po 90 dienu bus: {res}')
+print('--------------------------------------------')
+# 8 Task
+current_date = datetime.datetime.today()
+previous_date = datetime.datetime(2000, 1, 1)
+res = current_date - previous_date
+print(f'Days: {res}')
+print(f'Hours: {res.seconds}')
+seconds = res.total_seconds()
+print(f'Seconds: {seconds}')
 

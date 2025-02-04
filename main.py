@@ -31,3 +31,27 @@ print('---------------------------------------')
 print(my_datetime)
 print(my_datetime.strftime("%d %m %Y"))
 print(my_datetime.strftime("%d %B %Y"))
+print('---------------------------------------')
+#Example
+dabar = datetime.datetime.today()
+mileniumas = datetime.datetime(2000, 1, 1)
+skirtumas = dabar - mileniumas
+print(skirtumas)
+print(type(skirtumas))
+print('---------------------------------------')
+#Example
+skirtumas = datetime.timedelta(hours=1000)
+print(skirtumas)
+res = dabar + skirtumas
+print(res)
+skirtumas = datetime.timedelta(days=1000, hours=100, minutes=100)
+print(skirtumas)
+res = dabar - skirtumas
+print(res)
+print('---------------------------------------')
+#Example
+print(skirtumas.days)
+print(skirtumas.seconds)
+print(skirtumas.seconds / 60 / 60)
+sekundes = skirtumas.total_seconds()
+print(sekundes)
