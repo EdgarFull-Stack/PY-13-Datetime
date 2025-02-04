@@ -51,14 +51,14 @@ print('--------------------------------------------')
 # 7 Task
 current_date = datetime.datetime.today()
 res = current_date + datetime.timedelta(days=90)
-print(f'Data po 90 dienu bus: {res}')
+print(f'Data po 90 dienu bus: {res.strftime('%Y-%m-%d')}')
 print('--------------------------------------------')
 # 8 Task
 current_date = datetime.datetime.today()
 previous_date = datetime.datetime(2000, 1, 1)
 res = current_date - previous_date
 print(f'Days: {res}')
-print(f'Hours: {res.seconds}')
+print(f'Hours: {res.seconds // 3600}')
 seconds = res.total_seconds()
 print(f'Seconds: {seconds}')
 
